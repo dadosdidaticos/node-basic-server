@@ -5,19 +5,19 @@ const port = process.env.PORT || 8080
 const server = http.createServer((req, res) => {
     res.statusCode = 200
     res.setHeader('Content-Type', 'text/html');
-    let path = './'
+    let path = 'https://node-basic-server.marcos-vinici70.repl.co/'
     switch(req.url){
         case '/':
-            path = './index.html'
+            path += 'index.html'
             break
         case '/about':
-            path = './about.html'
+            path += 'about.html'
             break
         case '/contactme':
-            path = './contactme.html'
+            path += 'contactme.html'
             break
         default:
-            path = './404.html'
+            path += '404.html'
             break;
     }
 
